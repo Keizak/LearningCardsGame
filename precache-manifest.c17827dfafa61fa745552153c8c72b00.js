@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "fba72ff3b42a33a14c7d3dd39a5cfefd",
+    "revision": "895bf405d7aa32b8aadc9c0a37cfef52",
     "url": "/LearningCardsGame/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/LearningCardsGame/static/css/2.60eec0d8.chunk.css"
   },
   {
-    "revision": "81f1b0c822dc4ae024f4",
+    "revision": "9a77b32142bf73430ddf",
     "url": "/LearningCardsGame/static/css/main.8008857e.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/LearningCardsGame/static/js/2.70ddd9f4.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "81f1b0c822dc4ae024f4",
-    "url": "/LearningCardsGame/static/js/main.819e48d3.chunk.js"
+    "revision": "9a77b32142bf73430ddf",
+    "url": "/LearningCardsGame/static/js/main.9f214328.chunk.js"
   },
   {
     "revision": "bda0b6e3b6bb73a20a4e",

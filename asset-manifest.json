@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/LearningCardsGame/static/css/main.8008857e.chunk.css",
-    "main.js": "/LearningCardsGame/static/js/main.819e48d3.chunk.js",
-    "main.js.map": "/LearningCardsGame/static/js/main.819e48d3.chunk.js.map",
+    "main.js": "/LearningCardsGame/static/js/main.9f214328.chunk.js",
+    "main.js.map": "/LearningCardsGame/static/js/main.9f214328.chunk.js.map",
     "runtime-main.js": "/LearningCardsGame/static/js/runtime-main.53063317.js",
     "runtime-main.js.map": "/LearningCardsGame/static/js/runtime-main.53063317.js.map",
     "static/css/2.60eec0d8.chunk.css": "/LearningCardsGame/static/css/2.60eec0d8.chunk.css",
     "static/js/2.70ddd9f4.chunk.js": "/LearningCardsGame/static/js/2.70ddd9f4.chunk.js",
     "static/js/2.70ddd9f4.chunk.js.map": "/LearningCardsGame/static/js/2.70ddd9f4.chunk.js.map",
     "index.html": "/LearningCardsGame/index.html",
-    "precache-manifest.413e0dcdb1ccd8037d1378286542d836.js": "/LearningCardsGame/precache-manifest.413e0dcdb1ccd8037d1378286542d836.js",
+    "precache-manifest.c17827dfafa61fa745552153c8c72b00.js": "/LearningCardsGame/precache-manifest.c17827dfafa61fa745552153c8c72b00.js",
     "service-worker.js": "/LearningCardsGame/service-worker.js",
     "static/css/2.60eec0d8.chunk.css.map": "/LearningCardsGame/static/css/2.60eec0d8.chunk.css.map",
     "static/css/main.8008857e.chunk.css.map": "/LearningCardsGame/static/css/main.8008857e.chunk.css.map",
@@ -20,6 +20,6 @@
     "static/css/2.60eec0d8.chunk.css",
     "static/js/2.70ddd9f4.chunk.js",
     "static/css/main.8008857e.chunk.css",
-    "static/js/main.819e48d3.chunk.js"
+    "static/js/main.9f214328.chunk.js"
   ]
 }
