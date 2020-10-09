@@ -1,0 +1,35 @@
+.Table{
+    margin-top: 2%;
+    width: 90vw;
+
+}
+.HeaderTable{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    width: 90vw;
+    height: 5vh;
+    border-bottom: none;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: lavender;
+}
+.ContentTable{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 90vw;
+    min-height: 70vh;
+    overflow: scroll;
+    background-color: white;
+
+}
+.rowItem{
+    width: calc(90vw/5);
+}
+.Content{
+    display: flex;
+    flex-direction: row;
+}

@@ -1,0 +1,54 @@
+.btn {
+  position: relative;
+  display: block;
+  min-width: 60px;
+  width: fit-content;
+  margin: 20px auto;
+  padding: 10px;
+
+  background-color: #fff;
+  border: 1px solid #ccc;
+
+  color: #000;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  transform-style: flat;
+  transition: all 250ms ease-out;
+
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    z-index: -2;
+    transition: all 250ms ease-out;
+  }
+}
+
+/* Paper effect – slightly raised off background */
+.paper {
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(128, 128, 128, 0.1) inset;
+  border-color: #dedede;
+}
+
+.paper-raise-flatten {
+  border-color: #fff;
+  box-shadow: none;
+
+  &:before {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 15px 10px -10px rgba(31, 31, 31, 0.5);
+  }
+
+  &:hover {
+    border-color: #dedede;
+
+    &:before {
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(128, 128, 128, 0.1) inset;
+    }
+  }
+}
