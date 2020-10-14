@@ -1,0 +1,223 @@
+.registerPage{
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    font: 14px Arial ;
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+
+}
+:root{
+    --logo-size:80px;
+    --logo-half-size:40px;
+}
+.preloader{
+    display: flex;
+    background: #222222;
+    position: relative;
+    transition: 0.5s;
+}
+.preloader__image_animate{
+    background-image: url("../../common/Images/DogPreloader.png");
+    background-size: var(--logo-size) var(--logo-size);
+    width: var(--logo-size);
+    height: var(--logo-size);
+    position: absolute;
+    top: calc(50% - var(--logo-half-size));
+    left: calc(50% - var(--logo-half-size));
+    transition: 1s linear;
+    animation: up-down 1s infinite;
+}
+@keyframes up-down{
+    0%{
+        top: calc(50% - var(--logo-half-size));
+    }
+    0%{
+        top: calc(50% - 10px);
+    }
+    75%{
+        top: calc(50%);
+    }
+    100%{
+        top: calc(50% - 10px);
+    }
+    from{
+        -webkit-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    to{
+        -webkit-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+.registerPage form{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+}
+.contentContainer
+{
+    margin-left: 5%;
+    margin-right: 5%;
+    min-width: 450px;
+    position: relative;
+}
+.Container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url("../../common/Images/Registration.png");
+    background-size: 100% 100%;
+    z-index: 0;
+    width: 100%;
+    height: 350px;
+    border-radius: 10%;
+    margin-top: 25%;
+}
+.input {
+    font-size: 16px;
+    padding: 10px;
+    display: block;
+    width: 300px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+}
+.title{
+    font-family: 'Russo One', sans-serif;
+    color: black;
+    z-index: 100;
+    text-align: center;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.formgroup {
+    color: white;
+    position: relative;
+    margin-bottom: 8%;
+}
+.registerPage input {
+    width: 100%;
+    padding: 10px 5px;
+}
+.registerPage label{
+    color: white;
+    position: absolute;
+    top: -60%;
+    left:0;
+    font-size: var(--font-size-small);
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.2s ease-out;
+}
+.registerPage input:valid ~ label{
+    font-size: 14px;
+    font-family: 'Russo One', sans-serif;
+    color: black;
+}
+.registerPage input:focus ~ label {
+    font-size: 18px;
+    font-family: 'Russo One', sans-serif;
+    color: black;
+}
+
+.formgroup label{
+    color: white;}
+.registerPage input:placeholder-shown + label {
+    color: white;
+    opacity: 0;
+    transform: translateY(1rem);
+}
+
+
+.registerPage button {
+    align-self: end;
+    z-index: 100;
+    text-decoration: none;
+    outline: none;
+    display: inline-block;
+    width: 165px;
+    height: 45px;
+    line-height: 41px;
+    border-radius: 45px;
+    font-family: 'Russo One', sans-serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 2px;
+    font-weight: 600;
+    color: #111211;
+    background: #46e881;
+    box-shadow: 0 8px 15px rgba(0,0,0,.1);
+    transition: .3s;
+    align-self: flex-end;
+}
+.registerPage button:hover {
+    background: #2EE59D;
+    box-shadow: 0 15px 20px rgba(46,229,157,.4);
+    color: white;
+    transform: translateY(-7px);
+}
+.buttonRegister{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.errorMessage{
+    position: relative;
+    transform: scale(-1, 1);
+    bottom: 50%;
+    right: 50%;
+    width: 150px;
+    height: 150px;
+    background-image: url("../../common/Images/error.png");
+    background-size: 100% 100%;
+    margin: 0;
+    font-weight:600;
+    color:red;
+}
+.errorText{
+    text-align: center;
+    position: relative;
+    top:20%;
+    transform: scale(-1, 1);
+    font-size: 16px;
+    font-family: 'Russo One', sans-serif;
+    color:red;
+}
+.rules{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    width:450px;
+    font-size: 16px;
+    font-family: 'Russo One', sans-serif;
+    margin-top: 40px;
+}
+@media (max-width: 1200px){
+
+}
+@media (max-width: 992px){
+    .contentContainer{
+        width:100%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+}
+@media (max-width: 760px) {
+    .contentContainer {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    .Container
+    {
+        width:70%;
+        height: 50%;
+    }
+}

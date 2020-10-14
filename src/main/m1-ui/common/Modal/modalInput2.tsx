@@ -6,13 +6,11 @@ import {Rating} from "@material-ui/lab";
 import Button from "@material-ui/core/Button";
 import InputLabel from "@material-ui/core/InputLabel";
 
-function rand() {
-    return Math.round(Math.random() * 20) - 10;
-}
+
 
 function getModalStyle() {
-    const top = 50 + rand();
-    const left = 50 + rand();
+    const top = 50
+    const left = 50
 
     return {
         top: `${top}%`,

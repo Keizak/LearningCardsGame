@@ -1,0 +1,74 @@
+.MainContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    height: 80vh;
+}
+.Photo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 40vw;
+    height: 55vh;
+}
+.Photo img{
+    width: 25vw;
+    height: 50vh;
+}
+.ProfileInfo{
+    width: 40vw;
+    height: 60vh;
+}
+.InfoItem{
+    font-family: "Chilanka", cursive;
+    font-size: 2em;
+    text-align: center;
+    height: 5vh;
+}
+@media (max-width: 1200px){
+}
+@media (max-width: 992px){
+    .MainContainer{
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+    }
+    .Photo{
+        align-items: center;
+    }
+    .Photo img{
+        width: 30vh;
+        height: 30vh;
+    }
+    .InfoItem{
+        font-family: "Chilanka", cursive;
+        font-size: 1.2em;
+        text-align: center;
+        height: 5vh;
+    }
+}
+@media (max-width: 760px){
+    .MainContainer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow: hidden;
+    }
+    .Photo{
+        margin-top: 50px;
+        align-items: center;
+        width: 30vh;
+        height: 30vh;
+    }
+    .Photo img{
+        width: 30vh;
+        height: 30vh;
+    }
+    .ProfileInfo{
+        width: 90vw;
+        height: 60vh;
+        margin-top:10px;
+    }
+}

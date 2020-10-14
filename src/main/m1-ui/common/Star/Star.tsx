@@ -14,8 +14,8 @@ type StarChangePropsType ={
 }
 
 export const StarRead= (props:StarReadPropsType) => {
-    return (<Box component="fieldset" mb={3} borderColor="transparent">
-    <Rating name="read-only" value={props.value} readOnly />
+    return (<Box component="fieldset" mb={0} borderColor="transparent">
+    <Rating name="read-only" value={props.value} size={"large"} readOnly />
     </Box>)
 }
 export const StarChange= (props:StarChangePropsType) => {

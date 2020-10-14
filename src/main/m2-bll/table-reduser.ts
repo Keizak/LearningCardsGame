@@ -19,14 +19,12 @@ export type PaginatorType = {
 type StateType = {
     cards: any
     allPacks: any
-    myPacks: any
     isLoading: boolean
     paginator: PaginatorType
 }
 
 const initialState: StateType = {
     allPacks: null,
-    myPacks: null,
     cards: null,
     isLoading: false,
     paginator: {
@@ -42,8 +40,6 @@ export const tableReducer = (state = initialState, action: ActionType): StateTyp
     switch (action.type) {
         case 'SET-ALL-PACKS':
             return {...state, allPacks: action.packs}
-        case 'SET-MY-PACKS':
-            return {...state, myPacks: action.packs}
         case 'SET-IS-LOADING':
             return {...state, isLoading: action.value}
         case 'SET-CARDS':
@@ -67,7 +63,6 @@ export const tableReducer = (state = initialState, action: ActionType): StateTyp
             return {...state, paginator: {...state.paginator, currentPage: action.value}}
         }
         case 'FILTER-FOR SEARCH': {
-            debugger
             let searchValue = new RegExp(action.matchValue, 'i');
             let filterPacks = action.data.filter((pack) => pack.name.match(searchValue))
             return {...state, allPacks: filterPacks, paginator: {...state.paginator, packsCount: filterPacks.length}}
@@ -92,6 +87,7 @@ export const getPacksTC = (data:GetPacksDataType) => (dispatch: ThunkDispatch) =
         handleServerNetworkError(error, dispatch)
     })
 }
+
 export const addPackTC = (data: AddPackDataType, getData: GetPacksDataType) => (dispatch: ThunkDispatch) => {
     setIsLoadingAC(true)
     TableApi.addPack(data).then(res => {
@@ -204,7 +200,6 @@ export const gradeCardTC = (data: GradeCardDataType) => (dispatch: ThunkDispatch
 // Action Creators
 
 export const setAllPacksAC = (packs: PackType) => ({type: 'SET-ALL-PACKS', packs} as const)
-export const setMyPacksAC = (packs: PackType) => ({type: 'SET-MY-PACKS', packs} as const)
 export const setIsLoadingAC = (value: boolean) => ({type: 'SET-IS-LOADING', value} as const)
 export const setCardsAC = (cards: CardsType) => ({type: 'SET-CARDS', cards} as const)
 export const setPacksTotalCountAC = (count: number) => ({type: 'SET-COUNT', count} as const)
@@ -216,7 +211,6 @@ export const filterForSearchAC = (data: Array<any>,matchValue:string) => ({type:
 type filterForSearchActionType = ReturnType<typeof filterForSearchAC>
 type setCardsActionType = ReturnType<typeof setCardsAC>
 type setAllPacksActionType = ReturnType<typeof setAllPacksAC>
-type setMyPacksActionType = ReturnType<typeof setMyPacksAC>
 type setLoadingActionType = ReturnType<typeof setIsLoadingAC>
 type setPacksTotalCountActionType = ReturnType<typeof setPacksTotalCountAC>
 export type setStartPagePaginatorActionType = ReturnType<typeof setStartPagePaginatorAC>
@@ -224,7 +218,7 @@ type setEndPagePaginatorActionType = ReturnType<typeof setEndPagePaginatorAC>
 type setCurrentPagerActionType = ReturnType<typeof setCurrentPagerAC>
 
 type ActionType = setLoadingActionType | setAllPacksActionType | setCardsActionType | setPacksTotalCountActionType |
-    setStartPagePaginatorActionType | setEndPagePaginatorActionType | setCurrentPagerActionType | setMyPacksActionType |
+    setStartPagePaginatorActionType | setEndPagePaginatorActionType | setCurrentPagerActionType |
     filterForSearchActionType
 
 
