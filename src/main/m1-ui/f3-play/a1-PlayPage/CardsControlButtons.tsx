@@ -6,7 +6,7 @@ import {gradeCardTC} from "../../../m2-bll/table-reduser";
 
 type CardsControlButtonsPropsType = {
     cardId: any
-    closeAnswer: () => void
+    nextCard: () => void
 }
 
 export function CardsControlButtons(props: CardsControlButtonsPropsType) {
@@ -16,7 +16,7 @@ export function CardsControlButtons(props: CardsControlButtonsPropsType) {
     const nextCard = () => {
         dispatch(gradeCardTC({grade: value, card_id: props.cardId}))
         setValue(1)
-        props.closeAnswer()
+        props.nextCard()
     }
     return (
         <div className={style.controlButton}>

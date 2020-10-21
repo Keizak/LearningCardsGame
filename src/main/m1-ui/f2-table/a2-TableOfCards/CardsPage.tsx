@@ -8,13 +8,13 @@ import {
     gradeCardTC,
     updateCardTC
 } from "../../../m2-bll/table-reduser";
-import {Redirect, useParams} from 'react-router-dom'
+import {useParams} from 'react-router-dom'
 import {AppRootStateType} from "../../../m2-bll/store";
-import TableForCards from "./TableCards";
 import {DeleteCardDataType, GradeCardDataType, UpdateCardDataType} from "../../../m3-dal/tableApi";
 import {Button} from "@material-ui/core";
 import AddNewCardModal from "../../common/Modal/addNewCardModal";
 import {Preloader} from "../../common/Preloader/Preloader";
+import {TableOfCards} from "./TableOfCards";
 
 
 function CardPage() {
@@ -45,18 +45,29 @@ function CardPage() {
             <AddNewCardModal text={"Do you want to create new card?"}
                              open={addCardModalOpen}
                              onButtonClick={addButton}
-                             setModalOpen={setAddCardModalOpen}/>:
-            <TableForCards columnsName={["question", "answer", "Grade", "updated", "Shots",
+                             setModalOpen={setAddCardModalOpen}/>
+            {/*<TableForCards columnsName={["Question", "Answer", "Grade", "Updated", "Shots",*/}
+            {/*    <Button size={"small"} style={{margin: "5px", height: " 20px"}}*/}
+            {/*            variant="contained"*/}
+            {/*            color="primary"*/}
+            {/*            onClick={() => setAddCardModalOpen(true)}>Add</Button>]}*/}
+            {/*               rowContent={CardsData}*/}
+            {/*               buttonsData={[*/}
+            {/*                   {name: "Update", onClick: updateButton},*/}
+            {/*                   {name: "Delete", onClick: deleteButton},*/}
+            {/*                   {name: "Grade", onClick: gradeButton},*/}
+            {/*                   {name: "Play", onClick: playButton},]}/>*/}
+            <TableOfCards titleContent={["Question", "Answer", "Grade", "Updated", "Shots",
                 <Button size={"small"} style={{margin: "5px", height: " 20px"}}
                         variant="contained"
                         color="primary"
-                        onClick={() => setAddCardModalOpen(true)}>Add new card</Button>]}
-                           rowContent={CardsData}
-                           buttonsData={[
-                               {name: "Update", onClick: updateButton},
-                               {name: "Delete", onClick: deleteButton},
-                               {name: "Grade", onClick: gradeButton},
-                               {name: "Play", onClick: playButton},]}/>
+                        onClick={() => setAddCardModalOpen(true)}>Add</Button>]}
+                          rowsContent={CardsData}
+                          buttonsData={[
+                              {name: "Update", onClick: updateButton},
+                              {name: "Delete", onClick: deleteButton},
+                              {name: "Grade", onClick: gradeButton},
+                              {name: "Play", onClick: playButton},]}/>
         </div>}
     </div>
 }

@@ -18,11 +18,13 @@ const Paginator = (props:PaginatorPropsType) => {
         <div className={style.Main}>
         <div className={style.Pagination}>
             <button className={style.startButton} onClick={props.goStart}>Start</button>
+            <div className={style.number}>
             {buttons.map((b)=>{
                 let goPage = props.goPage
                 function Handler(){goPage(b)}
                 if (b <= props.endValue) return <button onClick={Handler}>{b}</button>
             })}
+        </div>
             <button className={style.endButton} onClick={props.goFinish}>End</button>
         </div>
         </div>

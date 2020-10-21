@@ -75,7 +75,7 @@ function TableForProfile(props: TablePropsType) {
                                         TableHeight={TableHeight}/>
                         </div>
                     </>
-                    : <></>}
+                    : <div className={style.Preloader}><Preloader/></div>}
             </div>
         </div>
     )

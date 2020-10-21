@@ -4,18 +4,29 @@
     flex-direction: column;
 }
 .Pagination{
-    margin-top: -3vh;
+    display: flex;
+    flex-direction: row;
+    margin-top: 1vh;
     align-self: center;
     height: 20px;
-    width: 300px;
+    width: 400px;
 }
 .Pagination button{
-    font-family: 'Sansita Swashed', cursive;
+    font-family: "Chilanka", cursive;
+    font-size: 1em;
+    background-color: #5C5EDC;
+    color: white;
+    height: 30px;
+    width: 50px;
+}
+.number button{
+    font-family: "Chilanka", cursive;
     background-color: #5C5EDC;
     color: white;
     height: 30px;
     width: 40px;
 }
+
 .startButton{
     border-bottom-left-radius:30%;
     border-top-left-radius: 30%;
@@ -26,7 +37,7 @@
 }
 @media (max-width: 1200px) {
     .Pagination{
-        margin-top: 1vh;
+        margin-top: 1.5vh;
         align-self: center;
         height: 10px;
         width: 300px;
@@ -34,5 +45,8 @@
     .Pagination button{
         height: 20px;
         font-size: 10px;
+    }
+    .number{
+        display: flex;
     }
 }

@@ -21,9 +21,6 @@ function HeaderNavbar() {
                 <NavLink className={style.NavbarItem} activeClassName={style.Active} to="/settings">Settings</NavLink>
             </div>
             <div>
-                <NavLink className={style.NavbarItem} activeClassName={style.Active} to="/files">Upload Files</NavLink>
-            </div>
-            <div>
                 <NavLink className={style.NavbarItem} activeClassName={style.Active} to="/login" onClick={logoutHandler}>GetOut</NavLink>
             </div>
         </div>

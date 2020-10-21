@@ -1,9 +1,9 @@
 .Table{
     margin-top: 2%;
     width: 90vw;
-
+    height: 80vh;
 }
-.HeaderTable{
+.HeaderTable {
     display: flex;
     flex-direction: row;
     text-align: center;
@@ -16,20 +16,37 @@
     font-weight: 600;
     background-color: lavender;
 }
+.HeaderTable div{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row;
+    height: 5vh !important;
+}
 .ContentTable{
+    height: 75vh;
     display: flex;
     flex-direction: column;
     text-align: center;
     width: 90vw;
-    min-height: 70vh;
-    overflow: scroll;
+    overflow: hidden;
     background-color: white;
-
-}
-.rowItem{
-    width: calc(90vw/5);
 }
 .Content{
     display: flex;
+    align-items: center;
+    justify-content: center;
     flex-direction: row;
+}
+@media (max-width: 1200px) {
+
+    .HeaderTable{
+        font-size: 0.8em;
+
+    }
+    .ContentTable{
+        font-size: 0.5em;
+        overflow-y: scroll;
+        overflow-x: scroll;
+    }
 }

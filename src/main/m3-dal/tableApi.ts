@@ -5,7 +5,7 @@ const settings = {
     withCredentials: true
 }
 const instance = axios.create({
-    baseURL: "https://neko-back.herokuapp.com/2.0", //"http://localhost:7542/2.0" ,
+    baseURL: "http://localhost:7542/2.0" , //"https://neko-back.herokuapp.com/2.0",
     ...settings
 })
 
@@ -20,7 +20,7 @@ export const TableApi = {
 &max=${data.max ? data.max : ""}\
 &sortPacks=${data.sortPacks ? data.sortPacks : ""}\
 &page=${data.page ? data.page : ""}\
-&pageCount=${data.pageCount ? data.pageCount : "25"}\
+&pageCount=${data.pageCount ? data.pageCount : "22"}\
 &user_id=${data.user_id ? data.user_id : ""}`);
         return promise;
     },
@@ -37,7 +37,7 @@ export const TableApi = {
         return promise;
     },
     getCards(data: GetCardsDataType) {
-        const promise = instance.get(`cards/card?&cardsPack_id=${data.cardsPack_id}&pageCount=100`);
+        const promise = instance.get(`cards/card?&cardsPack_id=${data.cardsPack_id}&pageCount=16`);
         return promise;
     },
     addCard(data: AddCardDataType) {

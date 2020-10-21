@@ -5,7 +5,8 @@ import {StarRead} from "../../common/Star/Star";
 type CardsSideQPropsType = {
     currentCard: NewCardType | any
     ansVisibility:boolean
-    openAnswer: ()=> void
+    handleOpen: () => void
+    handleClose: () => void
 }
 type NewCardType = {
     number: number
@@ -14,11 +15,12 @@ type NewCardType = {
     grade: number
 }
 export const Card= (props: CardsSideQPropsType) => {
-return (<div className={style.cardPack}>
+
+return (<div className={style.cardPack} >
     <div className={style.cardBorder}>
         <div className={style.stars}><StarRead value={props.currentCard.grade}/></div>
         <div className={style.question}>Question:<br/>{props.currentCard.question} ?</div>
-        <div className={style.answer}><button onClick={props.openAnswer}>{props.ansVisibility ? `${props.currentCard.answer}` : "Open answer"}</button></div>
+        <div className={style.answer}><button onClick={props.handleOpen} >Open answer</button></div>
     </div>
 </div>)
 }

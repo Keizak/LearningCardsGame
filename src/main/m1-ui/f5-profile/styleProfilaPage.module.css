@@ -1,25 +1,36 @@
 .MainContainer{
     display: flex;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
     overflow: hidden;
-    height: 80vh;
+    width: 90vw;
+    height: 90vh;
 }
 .Photo{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 40vw;
-    height: 55vh;
+    border: 5px solid #3f51b5;
+    border-radius: 50%;
+    width: 30vh;
+    height: 30vh;
 }
 .Photo img{
-    width: 25vw;
-    height: 50vh;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
 }
-.ProfileInfo{
-    width: 40vw;
-    height: 60vh;
+.profileInfo{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width:50vw;
+}
+.Info{
+    display: flex;
+    flex-direction: column;
 }
 .InfoItem{
     font-family: "Chilanka", cursive;
@@ -27,48 +38,60 @@
     text-align: center;
     height: 5vh;
 }
-@media (max-width: 1200px){
+.table{
+    text-align: center;
+    width:60vw;
+    height: 50vh;
 }
-@media (max-width: 992px){
+.title{
+    font-family: "Chilanka", cursive;
+}
+@media (max-width: 1200px){
     .MainContainer{
         display: flex;
         flex-direction: column;
         overflow: hidden;
+        width: 100vw;
+    }
+    .profileInfo{
+        width: 95vw;
     }
     .Photo{
         align-items: center;
+        width: 25vh;
+        height: 25vh;
     }
     .Photo img{
-        width: 30vh;
-        height: 30vh;
+        width: 25vh;
+        height: 25vh;
     }
     .InfoItem{
         font-family: "Chilanka", cursive;
         font-size: 1.2em;
         text-align: center;
-        height: 5vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 7vh;
     }
-}
-@media (max-width: 760px){
-    .MainContainer{
+    .Info{
+        height: 25vh;
         display: flex;
         flex-direction: column;
         align-items: center;
-        overflow: hidden;
+        justify-content: space-evenly;
     }
-    .Photo{
-        margin-top: 50px;
-        align-items: center;
-        width: 30vh;
-        height: 30vh;
+    .table{
+        text-align: center;
+        width:95vw;
+        height: 50vh;
     }
-    .Photo img{
-        width: 30vh;
-        height: 30vh;
+    .title{
+        font-size: 0.8em;
     }
-    .ProfileInfo{
-        width: 90vw;
-        height: 60vh;
-        margin-top:10px;
-    }
+}
+@media (max-width: 992px){
+}
+@media (max-width: 760px){
+
 }
